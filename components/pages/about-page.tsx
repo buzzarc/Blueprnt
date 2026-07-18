@@ -39,7 +39,7 @@ export function AboutPage() {
                 <Globe className="h-5 w-5" />
               </a>
               <a
-                href="#https://www.instagram.com/buzz.rc2?igsh=bXB4N2d5ZHRlNHdh"
+                href="https://www.instagram.com/buzz.rc2?igsh=bXB4N2d5ZHRlNHdh"
                 aria-label="Social"
                 className="flex h-11 w-11 items-center justify-center border border-ink/20 text-ink transition-colors hover:bg-red hover:text-red-foreground"
               >
