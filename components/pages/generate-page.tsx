@@ -55,7 +55,7 @@ export function GeneratePage() {
         {/* FORM */}
         <form
           onSubmit={handleSubmit}
-          className="grain flex flex-col gap-5 border border-border bg-card p-6 lg:sticky lg:top-13 min-h-[638px]"
+          className="grain flex flex-col gap-5 border border-border bg-card p-6  h-fit"
         >
           <div className="flex flex-col gap-2">
             <label htmlFor="idea" className="label text-xs text-muted-foreground">
