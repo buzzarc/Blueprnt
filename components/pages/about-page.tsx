@@ -41,6 +41,7 @@ export function AboutPage() {
               </a>
               <a
                 href="https://www.instagram.com/buzz.rc2?igsh=bXB4N2d5ZHRlNHdh"
+                target="_blank"
                 aria-label="Social"
                 className="flex h-11 w-11 items-center justify-center border border-ink/20 text-ink transition-colors hover:bg-red hover:text-red-foreground"
               >
@@ -48,6 +49,7 @@ export function AboutPage() {
               </a>
               <a
                 href="mailto:utkarsh14486@gmail.com"
+                target="_blank"
                 aria-label="Email"
                 className="flex h-11 w-11 items-center justify-center border border-ink/20 text-ink transition-colors hover:bg-red hover:text-red-foreground"
               >
