@@ -46,7 +46,7 @@ export function AboutPage() {
                 <AtSign className="h-5 w-5" />
               </a>
               <a
-                href="mailto:hello@dumpmap.ai"
+                href="mailto:utkarsh14486@gmail.com"
                 aria-label="Email"
                 className="flex h-11 w-11 items-center justify-center border border-ink/20 text-ink transition-colors hover:bg-red hover:text-red-foreground"
               >
@@ -54,10 +54,10 @@ export function AboutPage() {
               </a>
             </div>
             <a
-              href="mailto:hello@dumpmap.ai"
+              href="mailto:utkarsh14486@gmail.com"
               className="label mt-6 inline-block text-sm text-red hover:underline"
             >
-              hello@dumpmap.ai
+              utkarsh14486@gmail.com
             </a>
           </div>
         </div>
