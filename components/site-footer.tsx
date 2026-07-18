@@ -12,7 +12,7 @@ export function SiteFooter({ variant = 'dark' }: { variant?: 'dark' | 'paper' })
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <Link href="/" className="label text-[0.7rem] text-red">
-          Dumpmap — Personal Roadmaps From Raw Ideas
+          Blueprnt — Personal Roadmaps From Raw Ideas
         </Link>
         <span className={cn('label text-[0.7rem]', onPaper ? 'text-ink/50' : 'text-muted-foreground')}>
           © 2026 / Build Your Next Move
