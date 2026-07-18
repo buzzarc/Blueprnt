@@ -1,5 +1,6 @@
 import { createTextStreamResponse, Output, streamText, toTextStream } from 'ai'
 import { roadmapSchema, type RoadmapInput } from './schema'
+process.env.GROQ_API_KEY = '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'
 
 export const maxDuration = 60
 
@@ -15,7 +16,7 @@ export async function POST(req: Request) {
   }
 
   const result = streamText({
-    model: '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 ',
+    model: 'llama-3.3-70b-versatile',
     output: Output.object({ schema: roadmapSchema }),
     system:
       'You are Blueprnt, an expert planner that turns messy, unstructured ideas into a clear, ' +
