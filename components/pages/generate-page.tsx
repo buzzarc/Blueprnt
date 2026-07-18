@@ -146,9 +146,14 @@ export function GeneratePage() {
           )}
 
           {error && (
-            <p className="border border-red bg-red/10 px-3 py-2 text-xs font-medium text-red">
-              Something went wrong. Please try again.
-            </p>
+            <div className="border border-red bg-red/10 px-3 py-3 text-xs font-medium leading-relaxed text-red">
+              <p className="font-bold uppercase tracking-widest">Generation failed</p>
+              <p className="mt-1 text-red/90">
+                {/credit card|verification|quota|billing/i.test(error.message ?? '')
+                  ? 'The AI Gateway needs a valid credit card on file to unlock free credits. Add one in your Vercel AI dashboard, then try again.'
+                  : 'Something went wrong reaching the model. Please try again in a moment.'}
+              </p>
+            </div>
           )}
         </form>
 
