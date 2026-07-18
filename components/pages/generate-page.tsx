@@ -51,11 +51,11 @@ export function GeneratePage() {
         </div>
       </section>
 
-      <div className="mx-auto grid w-full max-w-7xl flex-1 gap-4 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,380px)_1fr] lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl flex-1 items-start gap-4 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,380px)_1fr] lg:px-8">
         {/* FORM */}
         <form
           onSubmit={handleSubmit}
-          className="grain flex h-fit flex-col gap-5 border border-border bg-card p-6 lg:sticky lg:top-20"
+          className="grain flex flex-col gap-5 border border-border bg-card p-6 lg:sticky lg:top-20"
         >
           <div className="flex flex-col gap-2">
             <label htmlFor="idea" className="label text-xs text-muted-foreground">
@@ -209,7 +209,7 @@ export function GeneratePage() {
 
 function EmptyState() {
   return (
-    <div className="grain flex h-full min-h-80 flex-col items-center justify-center border border-dashed border-border bg-card/40 p-8 text-center">
+    <div className="grain flex min-h-[600px] flex-col items-center justify-center border border-dashed border-border bg-card/40 p-8 text-center lg:min-h-[640px]">
       <span className="mb-4 h-4 w-4 bg-red" aria-hidden />
       <p className="headline text-3xl text-foreground sm:text-4xl">Your roadmap<br />appears here</p>
       <p className="mt-4 max-w-sm text-sm font-medium leading-relaxed text-muted-foreground">
