@@ -20,7 +20,7 @@ export async function POST(req: Request) {
   }
 
   const result = streamText({
-    model: groq('llama-3.3-70b-versatile'),
+    model: groq('openai/gpt-oss-120b'),
     output: Output.object({ schema: roadmapSchema }),
     system:
       'You are Blueprnt, an expert planner that turns messy, unstructured ideas into a clear, ' +
