@@ -33,6 +33,7 @@ export function AboutPage() {
             <div className="mt-5 flex gap-3">
               <a
                 href="https://utkarshnande5.wixsite.com/portfolio"
+                target="_blank"
                 aria-label="Website"
                 className="flex h-11 w-11 items-center justify-center border border-ink/20 text-ink transition-colors hover:bg-red hover:text-red-foreground"
               >
