@@ -32,7 +32,7 @@ export function AboutPage() {
             <h2 className="headline text-4xl">Connect</h2>
             <div className="mt-5 flex gap-3">
               <a
-                href="#https://utkarshnande5.wixsite.com/portfolio"
+                href="https://utkarshnande5.wixsite.com/portfolio"
                 aria-label="Website"
                 className="flex h-11 w-11 items-center justify-center border border-ink/20 text-ink transition-colors hover:bg-red hover:text-red-foreground"
               >
