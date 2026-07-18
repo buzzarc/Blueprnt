@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   }
 
   const result = streamText({
-    model: 'openai/gpt-4.1-mini',
+    model: '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 ',
     output: Output.object({ schema: roadmapSchema }),
     system:
       'You are Blueprnt, an expert planner that turns messy, unstructured ideas into a clear, ' +
