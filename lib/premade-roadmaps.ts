@@ -1,0 +1,252 @@
+import type { Roadmap } from '@/app/api/roadmap/schema'
+
+export type PremadeRoadmap = Roadmap & {
+  slug: string
+  category: string
+  accent: 'red' | 'blue'
+  featured?: boolean
+  tagline: string
+}
+
+export const PREMADE_ROADMAPS: PremadeRoadmap[] = [
+  {
+    slug: 'build-a-saas-mvp',
+    category: 'Founders',
+    accent: 'red',
+    featured: true,
+    tagline:
+      'Validation, prototype, launch loop, and user feedback — arranged as weekly milestones for founders who need momentum.',
+    title: 'Build a SaaS MVP',
+    summary:
+      'Turn a rough product idea into a validated, launched MVP with real users in six weeks.',
+    totalDuration: '6 weeks',
+    difficulty: 'Intermediate',
+    stages: [
+      {
+        title: 'Validate the problem',
+        duration: 'Week 1',
+        goal: 'Confirm a painful, specific problem worth solving before writing code.',
+        milestones: ['Write a one-line problem statement', 'Interview 5 target users', 'Define the riskiest assumption'],
+        tools: ['Notion', 'Google Forms', 'Calendly'],
+        tasks: ['Draft 8 interview questions', 'Book 5 interviews', 'Log patterns in a sheet'],
+        checkpoint: 'If 3+ users describe the same pain unprompted, proceed. Otherwise refine the segment.',
+      },
+      {
+        title: 'Design the thin slice',
+        duration: 'Week 2',
+        goal: 'Scope the smallest feature set that delivers the core value.',
+        milestones: ['Map the core user flow', 'Cut scope to one job-to-be-done', 'Clickable prototype'],
+        tools: ['Figma', 'Excalidraw'],
+        tasks: ['Sketch the happy path', 'Prototype 3 screens', 'Test with 2 users'],
+        checkpoint: 'Users complete the core flow without help? Move to build.',
+      },
+      {
+        title: 'Build the core',
+        duration: 'Week 3-4',
+        goal: 'Ship the one flow that matters, end to end.',
+        milestones: ['Auth + data model', 'Core feature working', 'Deployed to production'],
+        tools: ['Next.js', 'Neon', 'Vercel'],
+        tasks: ['Set up the repo and DB', 'Build the primary flow', 'Deploy a live URL'],
+        checkpoint: 'Can a stranger sign up and complete the core action? If yes, open the launch loop.',
+      },
+      {
+        title: 'Launch loop',
+        duration: 'Week 5',
+        goal: 'Get the MVP in front of real users and capture feedback.',
+        milestones: ['10 users onboarded', 'Feedback channel live', 'First analytics event'],
+        tools: ['Vercel Analytics', 'Loops', 'Discord'],
+        tasks: ['Post in 3 communities', 'DM 20 warm leads', 'Add a feedback widget'],
+        checkpoint: 'At least 5 users returned a second time? Double down on that segment.',
+      },
+      {
+        title: 'Iterate to signal',
+        duration: 'Week 6',
+        goal: 'Fix the top friction point and find your first strong retention signal.',
+        milestones: ['Top 3 issues shipped', 'Retention measured', 'Pricing hypothesis'],
+        tools: ['PostHog', 'Stripe'],
+        tasks: ['Ship the #1 requested fix', 'Add a pricing page', 'Ask 5 users to pay'],
+        checkpoint: 'Someone pays or begs you not to shut it down? You have a real MVP.',
+      },
+    ],
+  },
+  {
+    slug: 'learn-ai-automation',
+    category: 'Operators',
+    accent: 'blue',
+    tagline:
+      'A practical path for mapping workflows, choosing tools, building simple agents, and measuring time saved.',
+    title: 'Learn AI Automation',
+    summary: 'Go from manual busywork to shipping AI automations that save real hours every week.',
+    totalDuration: '30 days',
+    difficulty: 'Beginner',
+    stages: [
+      {
+        title: 'Map your busywork',
+        duration: 'Days 1-5',
+        goal: 'Find the repetitive tasks worth automating first.',
+        milestones: ['Time-log a week', 'List top 10 repetitive tasks', 'Pick 3 candidates'],
+        tools: ['Toggl', 'Notion'],
+        tasks: ['Track tasks for 5 days', 'Rank by hours × frequency', 'Pick the juiciest 3'],
+        checkpoint: 'Do your top tasks add up to 3+ hours a week? Those are your targets.',
+      },
+      {
+        title: 'Learn the building blocks',
+        duration: 'Days 6-12',
+        goal: 'Understand prompts, triggers, and actions well enough to compose them.',
+        milestones: ['Build a prompt library', 'Wire a 2-step automation', 'Understand webhooks'],
+        tools: ['Zapier', 'AI SDK', 'ChatGPT'],
+        tasks: ['Recreate one manual task', 'Chain a trigger to an action', 'Log what broke'],
+        checkpoint: 'Can you explain trigger → action → output out loud? Then build for real.',
+      },
+      {
+        title: 'Ship automation #1',
+        duration: 'Days 13-21',
+        goal: 'Put one reliable automation into daily use.',
+        milestones: ['End-to-end automation live', 'Error handling added', 'Running daily'],
+        tools: ['Zapier', 'Slack', 'Google Sheets'],
+        tasks: ['Build the full flow', 'Add a failure alert', 'Use it every day for a week'],
+        checkpoint: 'Did it run a full week without manual fixes? Ship the next one.',
+      },
+      {
+        title: 'Measure and scale',
+        duration: 'Days 22-30',
+        goal: 'Prove the time saved and template it for reuse.',
+        milestones: ['Hours-saved dashboard', '3 automations live', 'Reusable template'],
+        tools: ['Google Sheets', 'Notion'],
+        tasks: ['Log time saved weekly', 'Package a template', 'Teach it to a teammate'],
+        checkpoint: 'Saving 5+ hours a week? Turn your process into a repeatable playbook.',
+      },
+    ],
+  },
+  {
+    slug: 'freelance-design-studio',
+    category: 'Creatives',
+    accent: 'blue',
+    tagline:
+      'Define an offer, package services, build a portfolio system, create outreach scripts, and close the first retainers.',
+    title: 'Freelance Design Studio',
+    summary: 'Build a focused freelance design practice that lands and keeps paying clients.',
+    totalDuration: '8 weeks',
+    difficulty: 'Intermediate',
+    stages: [
+      {
+        title: 'Define the offer',
+        duration: 'Week 1-2',
+        goal: 'Pick one clear service for one clear audience.',
+        milestones: ['Choose a niche', 'Write a one-line offer', 'Set starting rates'],
+        tools: ['Notion', 'Figma'],
+        tasks: ['List past work you loved', 'Draft 3 offer statements', 'Price a starter package'],
+        checkpoint: 'Can you describe who you help and how in one sentence? Move on.',
+      },
+      {
+        title: 'Build the portfolio system',
+        duration: 'Week 3-4',
+        goal: 'Show proof that matches the offer.',
+        milestones: ['3 case studies', 'Portfolio site live', 'Testimonial requests sent'],
+        tools: ['Framer', 'Figma', 'Loom'],
+        tasks: ['Write 3 case studies', 'Publish the site', 'Ask 5 past clients for quotes'],
+        checkpoint: 'Does every project on the site match the offer? Cut the rest.',
+      },
+      {
+        title: 'Outreach engine',
+        duration: 'Week 5-6',
+        goal: 'Start consistent, personalized outreach.',
+        milestones: ['Lead list of 50', 'Outreach scripts', '10 conversations'],
+        tools: ['LinkedIn', 'Instantly', 'Google Sheets'],
+        tasks: ['Build a 50-lead list', 'Write 3 outreach scripts', 'Send 10 messages a day'],
+        checkpoint: 'Booked 3+ discovery calls? Focus energy on closing.',
+      },
+      {
+        title: 'Close and retain',
+        duration: 'Week 7-8',
+        goal: 'Turn conversations into retainers.',
+        milestones: ['Proposal template', 'First signed client', 'Retainer pitch'],
+        tools: ['Notion', 'Stripe'],
+        tasks: ['Build a proposal template', 'Run 3 sales calls', 'Pitch a monthly retainer'],
+        checkpoint: 'One signed retainer? Systematize the exact steps that got you there.',
+      },
+    ],
+  },
+  {
+    slug: 'fitness-reset',
+    category: 'Beginners',
+    accent: 'blue',
+    tagline: 'Simple habits, food basics, strength sessions, recovery rules, and weekly checkpoints for staying consistent.',
+    title: 'Fitness Reset',
+    summary: 'Rebuild a sustainable fitness routine around consistency, not intensity.',
+    totalDuration: '21 days',
+    difficulty: 'Beginner',
+    stages: [
+      {
+        title: 'Set the baseline',
+        duration: 'Days 1-3',
+        goal: 'Know your starting point and one clear reason why.',
+        milestones: ['Record baseline stats', 'Write your why', 'Set a weekly schedule'],
+        tools: ['Apple Health', 'Notion'],
+        tasks: ['Log weight and energy', 'Write 3 motivations', 'Block workout times'],
+        checkpoint: 'Have 3 workout slots on your calendar? Start moving.',
+      },
+      {
+        title: 'Build the habit',
+        duration: 'Days 4-12',
+        goal: 'Show up consistently with easy, repeatable sessions.',
+        milestones: ['3 sessions a week', 'Protein target hit', 'Sleep window set'],
+        tools: ['Strong app', 'MyFitnessPal'],
+        tasks: ['Do 20-min sessions', 'Hit a protein goal daily', 'Fix a sleep schedule'],
+        checkpoint: 'Missed fewer than 2 sessions? Add a little intensity.',
+      },
+      {
+        title: 'Add progression',
+        duration: 'Days 13-21',
+        goal: 'Increase effort while protecting recovery.',
+        milestones: ['Progressive overload', 'Recovery routine', 'Weekly check-in habit'],
+        tools: ['Strong app', 'Apple Health'],
+        tasks: ['Add weight or reps', 'Add mobility work', 'Review progress each Sunday'],
+        checkpoint: 'Feeling stronger and not burnt out? Lock this in as your new normal.',
+      },
+    ],
+  },
+  {
+    slug: 'exam-sprint-system',
+    category: 'Students',
+    accent: 'red',
+    tagline: 'Convert scattered syllabus notes into a daily sprint plan with revision loops, mock tests, and weak-topic repair.',
+    title: 'Exam Sprint System',
+    summary: 'Turn a messy syllabus into a focused daily study sprint that targets your weak spots.',
+    totalDuration: '14 days',
+    difficulty: 'Beginner',
+    stages: [
+      {
+        title: 'Triage the syllabus',
+        duration: 'Days 1-2',
+        goal: 'Know exactly what to study and in what order.',
+        milestones: ['Full topic list', 'Weighted by exam marks', 'Weak topics flagged'],
+        tools: ['Notion', 'Anki'],
+        tasks: ['List every topic', 'Rate confidence 1-5', 'Sort by marks × weakness'],
+        checkpoint: 'Do you have a ranked topic list? Build the daily plan.',
+      },
+      {
+        title: 'Daily sprint loop',
+        duration: 'Days 3-10',
+        goal: 'Learn, recall, and repair one topic block per day.',
+        milestones: ['Daily study blocks', 'Active recall cards', 'Error log started'],
+        tools: ['Anki', 'Pomodoro timer'],
+        tasks: ['Study 2 focused blocks', 'Make recall cards', 'Log every mistake'],
+        checkpoint: 'Recall accuracy climbing on old cards? Start mock testing.',
+      },
+      {
+        title: 'Mock and repair',
+        duration: 'Days 11-14',
+        goal: 'Simulate the exam and fix what breaks.',
+        milestones: ['2 full mock tests', 'Weak-topic repair', 'Timing dialed in'],
+        tools: ['Past papers', 'Anki'],
+        tasks: ['Sit a timed mock', 'Repair the worst 3 topics', 'Retest under time'],
+        checkpoint: 'Mock scores rising and timing under control? You are exam-ready.',
+      },
+    ],
+  },
+]
+
+export function getPremadeBySlug(slug: string) {
+  return PREMADE_ROADMAPS.find((r) => r.slug === slug)
+}
