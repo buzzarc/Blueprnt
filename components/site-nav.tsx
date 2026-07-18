@@ -34,7 +34,7 @@ export function SiteNav({ variant = 'dark' }: { variant?: 'dark' | 'paper' | 'bl
       )}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5" aria-label="DUMPMAP home">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Blueprnt home">
           <span className="h-4 w-4 bg-red" aria-hidden />
           <span className={cn('label text-sm tracking-[0.22em]', text)}>Dumpmap</span>
         </Link>

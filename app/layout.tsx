@@ -18,7 +18,7 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'DUMPMAP — Personal Roadmaps From Raw Ideas',
+  title: 'Blueprnt — Personal Roadmaps From Raw Ideas',
   description:
     'Dump every messy idea in your head and let AI shape it into a staged, personalized roadmap — or browse proven premade paths with milestones, tools, and weekly tasks.',
   generator: 'v0.app',
